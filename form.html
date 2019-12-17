@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="ar">
+<head>
+  <title>Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./applicationsStyles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+    <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.standalone.min.css" rel="stylesheet"/>
+
+    <link rel="icon" href="download.png">
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Tajawal&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  function toggle(source) {
+  var inputs = document.getElementsByClassName("table-checkbox");
+    for (var i = 0; i < inputs.length; i++) { 
+            inputs[i].checked = source.checked; 
+      
+    }  
+
+}
+</script>
+
+</head>
+<body>
+  <header class="col-12">
+    <ul class="nav justify-content-end fixed-top">
+        <li class="nav-item ">
+            <form class="form-inline search-form-nav">
+                <div class="input-group ">
+                    <input type="text" class="form-control search-text" placeholder="ابحث رقم معاملة, اسم معاملة .." aria-label="Username" aria-describedby="basic-addon1">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text search-icon" id="basic-addon1"><i class="fa fa-search"></i></span>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li class="nav-item nav-padding-rs">
+            <i class="fa fa-comments"></i>
+        </li>
+        <li class="nav-item nav-padding-rs">
+            <i class="fa fa-globe"></i>
+        </li>
+        <li class="nav-item  nav-padding d-none
+        d-sm-none d-md-block">
+                <img
+                src="https://mdbootstrap.com/img/Photos/Avatars/avatar-5.jpg"
+                class="rounded-circle z-depth-0"
+                alt="avatar image"
+                height="35"
+              />
+        </li>
+        <li class="nav-item nav-padding d-none
+        d-sm-none d-md-block">
+            <div class="user-name-nav d-flex flex-column">
+                <span nav-link class="welcome-text">
+                    مرحباً خالد أبو العطا
+                </span>
+                <span class="dropdown menu-dropdown-nav">
+                <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                        عمادة تقنية المعلومات
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#">Link 1</a>
+                        <a class="dropdown-item" href="#">Link 2</a>
+                        <a class="dropdown-item" href="#">Link 3</a>
+                      </div>
+                    </span>
+            </div>
+        </li>
+        
+      </ul>
+</header>
+   <!-- MainSidebar -->
+   <div id="main-sidebar-wrapper">
+    <!-- /new -->
+    <ul class="main-sidebar-nav ">
+      <!-- <li class="sidebar-brand">
+        <a href="#"></a>
+      </li> -->
+      <li>
+        <a href="#"><i class="fa fa-home"></i></a>
+      </li>
+<li>
+    <span class="dropdown">
+                     
+        <i class="fa fa-angle-double-left dropdown-toggle table-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+ 
+    <div class="dropdown-menu sidemenuNav" aria-labelledby="dropdownMenuButton">
+      <h5 class="dropdown-header"> عنوان</h5>
+      <a class="dropdown-item" href="#"><i class="fa fa-home"></i> Action</a>
+      <a class="dropdown-item" href="#"><i class="fa fa-home"></i> Another action</a>
+      <a class="dropdown-item" href="#"><i class="fa fa-home"></i> Something else here</a>
+    </div>
+  </span>
+</li>
+      <li> 
+        <a href="#"><i class="fa fa-calendar"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-cog"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-home"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-envelope"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-calendar"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-cog"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-calendar"></i></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-cog"></i></a>
+      </li>
+    </ul>
+  </div>
+  <!-- /#main-sidebar-wrapper -->
+
+    <!-- wrapper -->
+    <div id="wrapper" class="toggled">
+            <!-- NotificationSidebar -->
+            <div id="sidebar-wrapper">
+              <!-- new -->
+              <a href="#menu-toggle" id="menu-toggle2">
+                <span>
+                    <i class="fa fa-chevron-right"></i>
+                    
+                </span>
+              </a>
+           
+              <!-- /new -->
+              <ul class="sidebar-nav notification-sidebar-nav">
+                  <a href="#menu-toggle" id="menu-toggle" class="notification-toggle">
+                      <span>
+                          <i class="fa fa-chevron-left"></i>
+                      </span>
+                    </a>
+                <li class="sidebar-brand">
+                 
+                  <a href="#menu-toggle" id="menu-toggle" class="d-flex justify-content-between">
+                    <span class="float-right">
+                        <i class="fa fa-bell"></i>
+                          إشعارات
+                    </span>
+                
+                    <div class="notification-icon pl-1">
+                    <i  style="font-size:18px" class="fa">&#xf080;</i>
+                    <i  style="font-size:18px" class="fa fa-cog"></i>  
+                    </div>
+                 
+                 
+                   </a>
+                </li>
+
+
+                <div id="tracking-pre"></div>
+                <div id="tracking">
+                   <div class="tracking-list">
+                    <div class="notification-item-container">
+                        <div class="tracking-item">
+                            <div class="tracking-icon status-intransit">
+                            </div>
+                            <span class="notification-text">
+                                <span class="badge badge-danger">منذ 30 دقيقة</span>
+                              </span>
+                              <span class="notification-txt pt-1" style="color:white;">
+                                  إنشاء معاملة خاصة بتطبيق اللائحة على أعضاء هيئة التدريس. 
+                              </span>
+                         </div>
+                    </div>
+                    <div class="notification-item-container">
+                      <div class="tracking-item">
+                         <div class="tracking-icon status-intransit">
+                         </div>
+                         <span class="notification-text">
+                            <span class="badge badge-info">منذ 30 دقيقة</span>
+                          </span>
+                          <span class="notification-txt pt-1" style="color:white;">
+                            إنشاء معاملة خاصة بتطبيق اللائحة على أعضاء هيئة التدريس. 
+                        </span>
+                      
+                      </div>
+                    </div>
+                    <div class="notification-item-container">
+                      <div class="tracking-item">
+                         <div class="tracking-icon status-intransit">
+                         </div>
+                         <span class="notification-text">
+                            <span class="badge badge-warning">منذ 30 دقيقة</span>
+                          </span>
+
+                          <span class="notification-txt pt-1" style="color:white;">
+                            إنشاء معاملة خاصة بتطبيق اللائحة على أعضاء هيئة التدريس. 
+                        </span>
+                      </div>
+                    </div>
+             
+                  </div>
+                </div>
+               
+              </ul>
+            </div>
+            <!-- /#notification-sidebar-wrapper -->
+          
+
+
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper" class="padding-conntent-toggel">
+              <div class="container-fluid">
+                <div class="title-wrapper mb-3">
+                  <span class="page-title mt-5">طلبات الإلتحاق </span>  
+                </div>
+
+              <div class="row">
+                  <ul class="timeline col-12">
+                    <li class="active col-3">
+                      <span class="timeline-top">البيانات الأساسية</span>
+                      <span class="timeline-bottom">ادخال بيانات الطلب</span>
+
+                    </li>
+                    <li class="col-3">     <span class="timeline-top">البيانات الأساسية</span>
+                      <span class="timeline-bottom">ادخال بيانات الطلب</span>
+</li>
+                    <li class="col-3">     <span class="timeline-top">البيانات الأساسية</span>
+                      <span class="timeline-bottom">ادخال بيانات الطلب</span>
+</li>
+                    <li class="col-3" >     <span class="timeline-top">البيانات الأساسية</span>
+                      <span class="timeline-bottom">ادخال بيانات الطلب</span>
+</li>
+                  </ul>
+        
+</div>
+            
+                
+
+
+               <div class="row">
+                <div class="card col-12 shadow p-3 mb-2 bg-white rounded">
+                   
+                  <div class="card-body ">
+           
+                        <form>
+                            <div class="form-row">
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                    <label for="ControlSelect1">الاسم الأول عربي</label>
+                                    <input type="text" class="form-control" >
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                        <label for="ControlSelect2">الاسم الثاني عربي</label>
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                        <label for="ControlSelect2">اسم العائلة عربي</label>
+                                        <input type="text" class="form-control">
+                                    </div> 
+                            </div>
+                            <div class="form-row">
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                    <label for="ControlSelect1">الاسم الأول انجليزي</label>
+                                    <input type="text" class="form-control">
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                        <label for="ControlSelect2">الاسم الثاني انجليزي</label>
+                                        <input type="text" class="form-control" >
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                        <label for="ControlSelect2">اسم العائلة انجليزي</label>
+                                        <input type="text" class="form-control" >
+                                    </div> 
+                            </div>
+
+                            <div class="form-row">
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                    <label for="ControlSelect1">الرقم القومي</label>
+                                    <input type="text" class="form-control" id="name4">
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                        <label for="ControlSelect2">النوع</label>
+                                        <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                  <input type="radio" class="form-check-input" > ذكر
+                                                </label>
+                                              </div>
+                                              <div class="form-check-inline">
+                                                <label class="form-check-label">
+                                                  <input type="radio" class="form-check-input" > أنثى
+                                                </label>
+                                              </div>
+                                                                                 
+                                       </div>
+
+                                       <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                            <label for="ControlSelect2">الديانة</label>
+                                            <div class="form-check-inline">
+                                                    <label class="form-check-label">
+                                                      <input type="radio" class="form-check-input" >مسلم
+                                                    </label>
+                                                  </div>
+                                                  <div class="form-check-inline">
+                                                    <label class="form-check-label">
+                                                      <input type="radio" class="form-check-input" >مسيحي
+                                                    </label>
+                                                  </div>
+                                                                                     
+                                           </div>
+
+
+                                
+                            </div>
+
+    
+                            <div class="form-row ">
+                                <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                  <label for="ControlSelect5">تاريخ الميلاد</label>
+                                  <div class="form-group">
+                                    <div class='input-group date' id='datetimepicker1'>
+                             
+                                        <input type="text" class="form-control" id="datepicker" placeholder="يوم/شهر/سنة">
+                                                                   <span class="input-group-addon">
+                                            <span class="fa fa-calendar"></span>
+                                        </span>
+                                    </div>
+                                </div>                                </div>
+                                  <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                    <label for="ControlSelect6">اللغة</label>
+                                    <select class="form-control" >
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+                                  <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                    <label for="ControlSelect7"> الجنسية</label>
+                                    <select class="form-control" >
+                                      <option>1</option>
+                                      <option>2</option>
+                                      <option>3</option>
+                                      <option>4</option>
+                                      <option>5</option>
+                                    </select>
+                                  </div>
+ 
+                            </div>
+
+                            <div class="form-row">
+                              <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                <label for="ControlSelect7"> حالة الوالدين</label>
+                                <select class="form-control" >
+                                  <option>1</option>
+                                  <option>2</option>
+                                  <option>3</option>
+                                  <option>4</option>
+                                  <option>5</option>
+                                </select>
+                              </div>
+                              <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                  <label for="ControlSelect2">مكان تواجد الطفل حال الإنفصال</label>
+                                  <input type="text" class="form-control">
+                              </div>
+                              <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                                  <label for="ControlSelect2">الترتيب بين الإخوة</label>
+                                  <input type="text" class="form-control">
+                              </div> 
+                      </div>
+
+
+                      <div class="form-row ">
+                        <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                          <label for="ControlSelect6">السنة الدراسية</label>
+                          <select class="form-control" >
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                          </select>
+                        </div>
+                          <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                            <label for="ControlSelect6">الفصل الدراسي</label>
+                            <select class="form-control" >
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-4 col-sm-6 pl-3 pr-3">
+                            <label for="ControlSelect7"> وسيلة المواصلات</label>
+                            <select class="form-control">
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                              <option>5</option>
+                            </select>
+                          </div>
+
+                    </div>
+                    <div class="form-row col-md-6 ">                        
+                        <label for="ControlSelect7" >  الصورة</label>
+
+                    <div class="input-group form-group col-12 d-flex flex-row ">
+             
+                        <input type="text" class="form-control col-8" placeholder="اضف صورة الطالب" aria-describedby="basic-addon2">
+                        <div class="input-group-append col-4 ">
+                        <button class="btn txt-btn-group col-12 " type="button">اضف صورة</button>
+
+                    </div>
+               
+                    </div>
+
+                    </div>
+
+          
+
+
+                          </form>                      
+               
+
+                  </div>
+
+
+                </div>
+
+
+                <div class="form-group col-md-12 col-sm-12 d-flex justify-content-end btn-container-out-card  pl-3 pr-3 ">
+                    <button type="button" class="form-control btn submit-btn  col-2">حفظ طلب الالتحاق</button>
+                </div>
+               </div>
+
+
+
+
+               <div class="row">
+                <div class="card col-12 shadow pt-0 p-3 mb-2 bg-white rounded">
+                    <div class="card-header main-card-header  d-flex justify-content-between">
+                        <span >  </span>
+                        <div class="table-header-icons">
+                            <i class="fa fa-folder-open"></i>
+                            <i class="fa fa-cog"></i>
+                            <i class="fa fa-download"></i>
+                            <i class="fa fa-trash"></i>
+                            <span class="dropdown">
+                     
+                                    <i class="fa fa-ellipsis-v dropdown-toggle table-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+                             
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                  <a class="dropdown-item" href="#">Action</a>
+                                  <a class="dropdown-item" href="#">Another action</a>
+                                  <a class="dropdown-item" href="#">Something else here</a>
+                                </div>
+                              </span>
+                          
+
+                        </div>
+                      </div>
+                  <div class="card-body table-card-body ">
+
+                    <div style="overflow-x:auto">
+                        <table class="col-12 table table-striped table-responsive"   style="overflow-x: auto;" >
+                            <thead>
+                            <tr>
+                                <th class="thin-column" >
+                                    <input type="checkbox" onClick="toggle(this)" />
+  
+                                </th>
+                          
+                                <th>
+                                 <span >
+                                   الاسم
+  
+                                 </span>
+                             
+                                </th>
+                                <th>
+                                  <div class="d-flex justify-content-between">
+                                   <span >تاريخ الميلاد</span>  
+                                
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="d-flex justify-content-between">
+                                   <span >النوع</span>  
+                               
+                                  </div>
+                                </th>
+                                <th>
+                                  <div class="d-flex justify-content-between">
+                                   <span >الديانة</span>  
+                            
+                                  </div>
+                                </th>                       
+                                <th>
+                                  <div class="d-flex justify-content-between">
+                                   <span >الصف الدراسي</span>  
+                       
+                                  </div>
+                                </th>
+                                   <th>
+                                     <div class="d-flex justify-content-between">
+                                      <span >وسيلة المواصلات</span>  
+                           
+                                     </div>
+                                   </th>
+                                   <th>
+                                    <div class="d-flex justify-content-between">
+                                     <span >سداد الرسوم</span>  
+                         
+                                    </div>
+                                  </th>
+                                  <th>
+                                    <div class="d-flex justify-content-between">
+                                     <span >الحالة</span>  
+                           
+                                    </div>
+                                  </th>
+                                <th class="thin-2-column">عمليات</th>
+  
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                              <td>
+                                  <input type="checkbox" class="table-checkbox" value="check1"/>
+                              </td>
+                                <td>System Architect</td>
+                                <td>Edinburgh</td>
+                            
+                               <td>61</td>
+                                <td>2011/04/25</td>
+                                <td>
+                                 ffffffffffffff
+                               </td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td>                                
+                                  <span class="badge badge-danger">غير مسددة</span>
+                                </td>
+                                <td>
+                                  <i class="fa fa-pencil"></i>                            
+                                  <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                              <td> <input type="checkbox" class="table-checkbox" value="check2"/></td> 
+                                <td>Accountant</td>
+                                <td>Tokyo</td>
+                                <td>63</td>
+                                <td>2011/07/25</td>
+                                <td>$170,750</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                               <td><span class="badge badge-success"> مسددة</span></td> 
+                                <td><i class="fa fa-pencil"></i>
+                                  <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="table-checkbox" value="check3"/>
+                              
+                                </td>
+                                <td>Junior Technical Author</td>
+                                <td>San Francisco</td>
+                                <td>66</td>
+                                <td>2009/01/12</td>
+                                <td>$86,000</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td><span class="badge badge-success"> مسددة</span></td> 
+                                <td>
+                                  <i class="fa fa-pencil"></i>
+                                  <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="checkbox" class="table-checkbox" value="check4"/>
+                              
+                                </td>
+                                <td>Senior Javascript Developer</td>
+                                <td>Edinburgh</td>
+                                <td>22</td>
+                                <td>2012/03/29</td>
+                                <td>$433,060</td>
+                                <td>Edinburgh</td>
+                                <td>61</td>
+                                <td><span class="badge badge-danger">غير مسددة</span></span>
+                                <td>
+                                  <i class="fa fa-pencil"></i>
+                                  <i class="fa fa-trash"></i>
+                                </td>
+                            </tr>
+                          
+           
+                        </tbody>
+                       
+                    </table>
+
+
+                      
+
+                    </div>
+               
+
+            
+                
+
+                  </div>
+                </div>
+               </div>
+              </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+
+
+
+                     
+    </div>
+    <!-- /#wrapper -->
+
+
+    <script>
+
+   
+
+        // <!-- Menu Toggle Script -->
+        $("#menu-toggle, #menu-toggle2").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+          $("#page-content-wrapper").toggleClass("padding-conntent-toggel");
+          $(".notification-sidebar-nav").fadeToggle();
+        });
+
+        $(".dropdown-toggle").on("click", function () {
+          if (!$(this).parent().hasClass("show")) {
+              $(this).click();
+          }
+        });
+
+
+$(".sidemenuNav").mouseleave(function(){
+  $(".sidemenuNav").css("display", "none");;
+});
+
+$('.dropdown').on('show.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+  });
+  $('.dropdown').on('hide.bs.dropdown', function() {
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+  });
+    $('.date').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+
+
+        $(".datepicker").mouseleave(function(){
+          $(".datepicker").attr("style", "display:none");;
+        });
+
+        $(".sidemenuNav").mouseleave(function(){
+          $(".sidemenuNav").css("display", "none");;
+        });
+
+        $( ".search-text" ).focus(function() {
+          $( ".search-form-nav" ).addClass("search-text-focus");
+          });
+              
+          $( ".search-text" ).blur(function() {
+          $( ".search-form-nav" ).removeClass("search-text-focus");
+          });
+
+    </script>
+
+</body>
+</html>
